@@ -1,0 +1,90 @@
+/* 🌈 Background Gradient & Fix for Streamlit */
+[data-testid="stAppViewContainer"] {
+    background: linear-gradient(135deg, #1a1f2b, #2b1055, #ff4b6e);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 💎 Glass Card */
+.card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for glass effect */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 40px rgba(255, 75, 110, 0.5);
+    border: 1px solid rgba(255, 75, 110, 0.3);
+}
+
+/* ❤️ Buttons - Fix for Streamlit's target classes */
+div.stButton > button {
+    background: linear-gradient(45deg, #ff4b6e, #6c63ff) !important;
+    color: white !important;
+    border-radius: 12px !important;
+    height: 50px !important;
+    width: 100% !important;
+    border: none !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+div.stButton > button:hover {
+    box-shadow: 0 0 25px #ff4b6e !important;
+    transform: scale(1.03) !important;
+    color: #fff !important;
+}
+
+/* 🧾 Inputs Background Fix */
+.stTextInput > div > div > input {
+    background-color: rgba(26, 31, 43, 0.8) !important;
+    color: white !important;
+    border-radius: 10px !important;
+    border: 1px solid #ff4b6e !important;
+}
+
+/* 📌 Sidebar Gradient */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #1a1f2b, #2b1055) !important;
+}
+
+/* 🌟 Title & Subtitles */
+h1 {
+    text-align: center;
+    color: #ff4b6e !important;
+    text-shadow: 0 0 15px rgba(255, 75, 110, 0.8);
+    font-size: 3rem !important;
+    padding-bottom: 10px;
+}
+
+h2, h3 {
+    color: #6c63ff !important;
+    text-align: center;
+}
+
+/* 📊 Custom Boxes (Applied via Markdown in main.py) */
+.score-box {
+    background: linear-gradient(45deg, #ff4b6e, #6c63ff);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 10px 20px rgba(255, 75, 110, 0.3);
+    margin: 10px 0;
+}
+
+/* Hide Streamlit Header & Footer for Cleaner Look */
+header {visibility: hidden;}
+footer {visibility: hidden;}
+#MainMenu {visibility: hidden;}
